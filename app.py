@@ -45,7 +45,8 @@ def analyze_image(image_bytes):
     if response.status_code != 200:
         raise Exception(f"API error: {response.text}")
 
-    return response.json()["choices"][0]["message"]["content"].strip()
+    # return response.json()["choices"][0]["message"]["content"].strip()
+    return "Done"
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
